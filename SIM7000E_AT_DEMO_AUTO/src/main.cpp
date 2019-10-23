@@ -45,12 +45,10 @@ void setup() {                                               // this routine is 
   sendCommand("AT", "OK", 2000);                             // AT to check connection
   sendCommand("ATE0", "OK", 2000);                           // echo off
   sendCommand("AT+CFUN=0", "+CPIN: NOT READY", 5000);        // flight mode on
-  //sendCommand("AT+COPS=1,2,\"20404\",7", "OK", 5000);        // CATM1 VF
-  sendCommand("AT+COPS=1,2,\"20495\",7", "OK", 5000);        // CATM1 +31 network
+  sendCommand("AT+COPS=1,2,\"20404\",7", "OK", 5000);        // CATM1 VF
   //sendCommand("AT+COPS=1,2,\"20408\",7", "OK", 5000);      // CATM1 KPN
   sendCommand("AT+CNMP=38", "OK", 5000);                     // use LTE network only
   sendCommand("AT+CMNB=1", "OK", 2000);                      // 1 is for CATM1, 2 is for NB-IoT 
-  sendCommand("AT+CGDCONT=1,\"IP\",\"INTERNET\"", "OK", 2000);
   
   sendCommand("AT+CFUN=1", "SMS Ready", 5000);               // flight mode on, start network search
   while(!sendCommand("AT+CREG?", ",1", 2000)) ;              // check network registration status
