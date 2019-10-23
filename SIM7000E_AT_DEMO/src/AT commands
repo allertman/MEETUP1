@@ -1,0 +1,37 @@
+
+AT command examples
+
+AT                                            // AT to check connection
+ATE0                                          // echo off
+AT+COPS?                                      // check operator selection 7 means CATM1!
+AT+CFUN=0                                     // flight mode on
+AT+COPS=1,2,"20404",7                         // CATM1 VF
+// AT+COPS=1,2,"20408",7                         // CATM1 KPN
+AT+CNMP=38                                    // use LTE network only
+AT+CMNB=1                                     // 1 is for CATM1, 2 is for NB-IoT 
+AT+CFUN=1                                     // flight mode on, start network search
+AT+CREG?                                      // check network registration status
+AT+CAPNMODE=0                                 // get APN defintions from the network!
+AT+CGATT?                                     // check attach status
+AT+CNACT?                                     // check PDP context status
+AT+CNACT=1                                    // activate PDPcontext
+AT+CNACT?                                     // check PDP context, now we should have our IP address
+
+AT+SMCONF="URL","farmer.cloudmqtt.com",16633  // MQTT config 
+AT+SMCONF="CLIENTID","SIM7000"                // MQTT config
+AT+SMCONF="USERNAME","eyneiyga"               // MQTT config
+AT+SMCONF="PASSWORD","_sTKZQbfemKK"           // MQTT config
+AT+SMCONN                                     // connect to broker
+AT+SMSTATE?                                   // check connection to Broker
+AT+SMSUB="#",0                                // subscribe to all topics
+AT+SMPUB="test",3,0,0                         // unclear why, but SIM7000 likes to publish before it receives stuff...
+AT+SMDISC                                     // release broker connection
+
+
+AT+CPSI?                                      // Inquiring Network Information
+AT+CSQ                                        // signal strength
+AT+GOI                                        // chip identifier
+AT+GMR                                        // Firmware build version
+AT+GSN                                        // IMEI number
+AT+CIMI                                       // IMSI
+
