@@ -26,8 +26,8 @@ bool sendCommand(const char *command, const char *reply, uint16_t timeout) {
   }
   replybuffer[idx] = '\0';                                   // 0 terminate the string
   Serial.println(replybuffer);                               // show reply from modem
-  if (Match) return true;                                    // return 1 if there is a match...
-  else return false;                                         // ...or return 0 if there is no match
+
+  Return Match;
 }
 
 
