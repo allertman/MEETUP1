@@ -11,3 +11,7 @@ Timothy Woo https://github.com/botletics
 Special thanks to Volodymyr Shymanskyy https://github.com/vshymanskyy for making the tinyGSM library
 
 The MQTT examples use a test instance on cloudMQTT, which over time I might delete. You can in that case make your own broker instance at cloudMQTT(or somewhere else) and change my server URL/Port and login credentials to your own.
+
+
+I used Platformio en VSC for my programming, if you like to use the Arduino IDE instead you need to copy the content of main.cpp (in the src folders) in a new sketch in the Arduino IDE. Make sure you will install the correct libraries in the Arduino IDE also.
+
