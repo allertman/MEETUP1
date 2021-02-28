@@ -7,7 +7,7 @@
 HardwareSerial Modemboard(2);          // Define the second serial port and call it Modemboard, RXpin=16, TXpin=17
 
 void setup() {                         // this routine is called at the start of the ESP32, and runs once
-  Serial.begin(115200);                // initialize the standard serial port, connecting the ESP32 with the PC
+  Serial.begin(9600);                // initialize the standard serial port, connecting the ESP32 with the PC
   Modemboard.begin(115200);            // initialize the second serial port, connecting the ESP32 with the Modemboard
 }
 
